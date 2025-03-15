@@ -1,6 +1,3 @@
-   // Navbar Scroll Hide/Show Logic
-   let lastScrollY = window.scrollY;
-   let scrollDisabled = false;
 
    function toggleMenu() {
        const menuList = document.querySelector('.menu-list');
@@ -19,20 +16,42 @@
        }
    }
 
+//    window.addEventListener('scroll', () => {
+//        if (scrollDisabled) return; // Prevent hiding if menu is open
+
+//        const navbar = document.querySelector('.navbar');
+//        if (window.scrollY < lastScrollY) {
+//            // Scrolling up → Show navbar
+//            navbar.style.top = '0';
+//        } else {
+//            // Scrolling down → Hide navbar
+//            navbar.style.top = '-100px';
+//        }
+
+//        lastScrollY = window.scrollY;
+//    });
+// to keep the navbar allt ime shown 
+   // Navbar Scroll Hide/Show Logic
+   let lastScrollY = window.scrollY;
+   const topBar = document.querySelector('.top-bar');
+   const navbar = document.querySelector('.navbar');
+   
    window.addEventListener('scroll', () => {
-       if (scrollDisabled) return; // Prevent hiding if menu is open
-
-       const navbar = document.querySelector('.navbar');
-       if (window.scrollY < lastScrollY) {
-           // Scrolling up → Show navbar
-           navbar.style.top = '0';
-       } else {
-           // Scrolling down → Hide navbar
-           navbar.style.top = '-100px';
-       }
-
-       lastScrollY = window.scrollY;
+     if (window.scrollY > lastScrollY) {
+       // Scrolling down → stick navbar to top
+       navbar.style.position = 'fixed';
+       navbar.style.top = '0';
+       topBar.style.display = 'none'; // hide top bar
+     } else {
+       // Scrolling up → show top bar and unstick navbar
+       navbar.style.position = 'sticky';
+       topBar.style.display = 'block'; // show top bar
+     }
+   
+     lastScrollY = window.scrollY;
    });
+   
+   
    // Video Logic
 
    const video = document.getElementById('video-background');
@@ -107,4 +126,39 @@
 //        showImage(currentIndex);
 //        setTimeout(startScroll, 4000);
 //    }).catch((error) => console.error('Failed to load an image:', error));
+
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("Form");
+    if (form !== null) {
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault(); // prevent default form submission behavior
+
+            // Get the form data
+            const formData = new FormData(form);
+            const name = formData.get("name");
+            const email = formData.get("email");
+            const message = formData.get("message");
+            console.log(name, email, message);
+
+            // Make an AJAX request to the email sending endpoint
+            try {
+                const response = await fetch("http://localhost:3000/send-email", {
+                    method: "POST",
+                    mode: "cors", // Add this line to handle CORS policy error
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    console.log("Email sent successfully!");
+                } else {
+                    console.error("Error sending email:", response.statusText);
+                }
+            } catch (error) {
+                console.error("Error sending email:", error);
+            }
+        });
+    } else {
+        console.error("Form not found");
+    }
+});
    

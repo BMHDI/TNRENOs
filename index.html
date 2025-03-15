@@ -9,10 +9,15 @@
   <body>
     <!-- Navbar -->
 
-    <div class="top-navbar"></div>
+    <div id="top-bar" class="top-navbar"> 
+      <div class="social-icons">
+      <img class="social-icon" src="./assets/facebook.png" alt="facebook Logo" />
+      <img class="social-icon" src="./assets/instagram.png" alt="facebook Logo" />
+      </div>
+    </div>
     <div class="navbar">
       <div class="logo">
-        <img src="./assets/logo TNRENO.png" alt="TN Reno'sLogo" />
+        <a href="#top-bar"> <img src="./assets/logo TNRENO.png" alt="TN Reno'sLogo" /></a>
       </div>
       <div class="menu">
         <div class="slogan">Turn it New</div>
@@ -21,13 +26,13 @@
     </div>
 
     <ul class="menu-list">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="#top-bar">Home</a></li>
+      <li><a href="#about-us">About</a></li>
       <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#contact-us">Contact</a></li>
     </ul>
     <!-- Hero Section -->
-    <div class="hero">
+    <div id="hero" class="hero">
       <!-- Video Background -->
       <img src="assets/Pattern header .png" alt="Pattern" class="pattern" />
 
@@ -58,37 +63,59 @@
     </div>
 
     <!-- Content Section -->
-    <div class="content">
+    <div class="content-section">
       <div class="button-container">
-      <button class="irregular-button">GET YOUR FREE QUOTE NOW</button>
+      <button onclick="location.href='#contact-us'" class="irregular-button">GET YOUR FREE QUOTE NOW</button>
       </div>
       <div class="text-container">
       <p>
-        At <span class="text-highlight">TN</span><span class="reno-highlight">RENO's</span>, we combine artistic vision with expert work to transform
+        At TN RENO's, we combine artistic vision with expert work to transform
         spaces with precision and care. We take pride in delivering exceptional
         results at a great value, ensuring that every renovation exceeds
         expectations.
       </p>
+      </div>
     </div>
     <!-- about us section -->
-  <div class="about-us">
+  <div id="about-us" class="about-us">
     <h2 class="about-us-h2">About Us</h2>
     <p class="about-us-text">
-      Welcome to <span class="text-highlight">TN</span><span class="reno-highlight">RENO's</span> – your trusted local renovation experts! Founded by Tarik and Nizar, we bring years of experience and a passion for transforming spaces into something extraordinary.
+      Welcome to TN RENO's – your trusted local renovation experts! Founded by Tarik and Nizar, we bring years of experience and a passion for transforming spaces into something extraordinary.
 
-      At <span class="text-highlight">TN</span><span class="reno-highlight">RENO's</span>, we specialize in all types of renovations – from kitchen and bathroom makeovers to full home and commercial upgrades. Our team combines artistic vision with expert craftsmanship to deliver results that not only meet but exceed your expectations.
+      At TN RENO's, we specialize in all types of renovations – from kitchen and bathroom makeovers to full home and commercial upgrades. Our team combines artistic vision with expert craftsmanship to deliver results that not only meet but exceed your expectations.
       
       We take pride in offering the best value for your money. Our commitment to quality means you get top-notch materials, precise attention to detail, and a finished product that stands the test of time – all at a fair price.
       
-      As a local business, we understand the importance of building trust and lasting relationships with our clients. When you work with <span class="text-highlight">TN</span><span class="reno-highlight">RENO's</span>, you’re not just hiring contractors – you’re partnering with artists who are dedicated to bringing your vision to life.
+      As a local business, we understand the importance of building trust and lasting relationships with our clients. When you work with TN RENO's, you’re not just hiring contractors – you’re partnering with artists who are dedicated to bringing your vision to life.
       
-      Let us turn your space into something truly special. Get in touch today to see how <span class="text-highlight">TN</span><span class="reno-highlight">RENO's</span> can make your dream renovation a reality!
+      Let us turn your space into something truly special. Get in touch today to see how TN RENO's can make your dream renovation a reality!
       </p> 
-      <h2 class="irregular-text-button">[ GET YOUR FREE QUOTE NOW !] </h2>
+      <h2 onclick="location.href='#contact-us'"  class="irregular-text-button">GET YOUR FREE QUOTE NOW !</h2>
 
        </div>
       </div>
-     
+      <!-- contact us -->
+       <div id="contact-us" class="contact-us">
+      <form id="Form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+      
+        <label for="quote">What is the quote about?</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+      
+        <label for="images">Upload Images (Optional)</label>
+        <input type="file" id="images" name="images" accept="image/*" multiple />
+      
+        <button class="submit" type="submit">Submit</button>
+      </form>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>

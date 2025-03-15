@@ -9,10 +9,11 @@ body {
 
 /* Top Navbar Section */
 .top-navbar {
-  height: 20px; /* Adjust height as needed */
+  height: 2.5rem; /* Adjust height as needed */
   background-color: #ff4800;
   position: relative;
   z-index: 1001; /* Higher than the navbar */
+  transition: all 3s ease;
 }
 
 /* Main Navbar */
@@ -26,13 +27,14 @@ body {
   padding-left: 10%;
   padding-right: 10%;
   width: 80%; /* Ensure consistent width */
-  position: sticky;
+  position: fixed;
   transition: top 0.3s ease;
   z-index: 200;
 }
 
 .navbar .logo img {
   height: 70px;
+  cursor: pointer;
 }
 
 /* Menu icon */
@@ -152,43 +154,30 @@ body {
   }
 }
 
-/* .hero img {
-  position: absolute;
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.hero img.active {
-  opacity: 1;
-  transform: scale(1.1); /* Slight zoom effect */
-  /* z-index: 100; */
-/* }
-
-.hero img.next {
-  opacity: 0;
-  transform: scale(1);
-  z-index: 5;
-} */ */
 /* Content Section */
-.content {
-  text-align: center;
- 
- 
+
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+
 }
+
 .button-container {
   display: flex;
   justify-content: center;
-  margin: 6rem;
+
 }
 .text-container {
-  margin: 6rem 1rem ;
+  margin: 4rem 1rem ;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; 
+
 }
 
 .irregular-button {
@@ -273,4 +262,48 @@ padding : 6rem 0rem;
   align-self: center;
   cursor: pointer;
   padding: 6rem 1rem;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contact-us {
+  margin-top: 2rem;
+}
+.submit {
+  background-color: #ff4800;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.social-icons {
+  margin-left: 1.5rem;
+}
+
+.social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem; 
+  cursor: pointer;
 }
