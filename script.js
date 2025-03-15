@@ -41,11 +41,11 @@
        // Scrolling down → stick navbar to top
        navbar.style.position = 'fixed';
        navbar.style.top = '0';
-       topBar.style.display = 'none'; // hide top bar
+      
      } else {
        // Scrolling up → show top bar and unstick navbar
        navbar.style.position = 'sticky';
-       topBar.style.display = 'block'; // show top bar
+
      }
    
      lastScrollY = window.scrollY;
