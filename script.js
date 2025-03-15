@@ -150,11 +150,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 if (response.ok) {
                     console.log("Email sent successfully!");
+                    document.getElementById("confirmation-div").innerHTML = "<p>Email sent successfully!</p>";
                 } else {
                     console.error("Error sending email:", response.statusText);
+                    document.getElementById("confirmation-div").innerHTML = "<p>Error sending email please try again!</p>";
                 }
             } catch (error) {
                 console.error("Error sending email:", error);
+                document.getElementById("confirmation-div").innerHTML = "<p>Error sending email please try again!</p>";
+
             }
         });
     } else {

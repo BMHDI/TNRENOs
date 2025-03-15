@@ -305,3 +305,9 @@ input, textarea, button {
   margin: 0.5rem; 
   cursor: pointer;
 }
+
+.confirmation {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #ff4800;
+}
