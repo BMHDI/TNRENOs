@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (response.ok) {
             console.log("Email sent successfully!");
             document.getElementById("confirmation-div").innerHTML =
-              "<div class='confirmation'>Email sent successfully!</div>";
+              "<div class='confirmation'> ✅ Email sent successfully!</div>";
   
             // Reset the form
             form.reset();
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Error sending email:", errorMessage);
             document.getElementById(
               "confirmation-div"
-            ).innerHTML = `<div class='error'>${errorMessage}</div>`;
+            ).innerHTML = `<div class='error'> ✖️ ${errorMessage}</div>`;
           }
         } catch (error) {
           console.error("Error sending email:", error);
