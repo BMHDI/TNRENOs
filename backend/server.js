@@ -9,12 +9,21 @@ const upload = multer();
 
 app.use(cors()); // Enable CORS for all routes
 
+const multerErrorHandling = (err, req, res, next) => {
+    if (err instanceof multer.MulterError) {
+      res.status(413).json({ error: 'Image limit exceeded, please upload no more than 5 images', details: err.message });
+    } else {
+      next(err);
+    }
+  };
 
-
-app.post('/send-email', upload.fields([{ name: 'images', maxCount: 5 }]), async (req, res) => {
+  app.post('/send-email', upload.fields([{ name: 'images', maxCount: 5 }]), multerErrorHandling, async (req, res) => {
     const { name, email, message, phone } = req.body;
-    const file = req.files && req.files.images && req.files.images[0];
-
+    const file = req.files && req.files.images;
+        if (req.files.images && req.files.images.length > 5) {
+        res.status(413).json({ error: 'Image limit exceeded. Please upload no more than 5 images.' });
+        return;
+      }
     const transporter = nodemailer.createTransport({
         service: 'gmail',  // You can change this to another service if needed
         auth: {
@@ -27,19 +36,19 @@ app.post('/send-email', upload.fields([{ name: 'images', maxCount: 5 }]), async 
         to: 'Tarikboumehdi91@gmail.com',
         subject: `New Contact Form Submission from ${name}`,
         text: `message:${message}\n\nFrom: ${email}`,
-        attachments: file ? [{
-            filename: file.originalname,
-            content: file.buffer
-        }] : []
+        attachments: file ? file.map((image) => ({
+            filename: image.originalname,
+            content: image.buffer
+          })) : []
     };
 
     try {
         await transporter.sendMail(mailOptions);
         res.status(200).json({ message: 'Email sent successfully' });
-    } catch (error) {
+      } catch (error) {
         console.error('Error sending email:', error);
-        res.status(500).json({ message: 'Failed to send email' });
-    }
+        res.status(500).json({ error: 'Error sending email', details: error.message });
+      }
 });
 
 app.listen(3000, () => console.log('Server is running on port 3000'));
