@@ -35,8 +35,8 @@ const multerErrorHandling = (err, req, res, next) => {
         from: email,
         to: 'Tarikboumehdi91@gmail.com',
         subject: `New Contact Form Submission from ${name}`,
-        text: `message:${message}\n\nFrom: ${email}`,
-        phone: phone,
+        text: `message:${message}\n\nFrom: ${email} \nPhone: ${phone}`,
+        
         attachments: file ? file.map((image) => ({
             filename: image.originalname,
             content: image.buffer
