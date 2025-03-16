@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const message = formData.get("message");
         const phone = formData.get("phone");
         const button = document.getElementById('send-email-button');
-        console.log(name, email, message);
+        console.log(name, email, message , phone);
   
         // Show sending...
         button.textContent = 'Sending...';
