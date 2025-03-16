@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
         // Make an AJAX request to the email sending endpoint
         try {
-          const response = await fetch("http://localhost:3000/send-email", {
+          const response = await fetch("https://tnrenos.onrender.com/send-email", {
             method: "POST",
             mode: "cors",
             body: formData,
