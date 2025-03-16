@@ -32,17 +32,19 @@ const multerErrorHandling = (err, req, res, next) => {
         }
     });
     const mailOptions = {
-        from: email,
+        from: 'no-reply@example.com',
         to: 'Tarikboumehdi91@gmail.com',
         subject: `New Contact Form Submission from ${name}`,
-        text: `message:${message}\n\nFrom: ${email} \nPhone: ${phone}`,
-        
+        html: `
+          <p>Message: ${message}</p>
+          <p>From: ${email}</p>
+          <p>Phone: ${phone}</p>
+        `,
         attachments: file ? file.map((image) => ({
-            filename: image.originalname,
-            content: image.buffer
-          })) : []
-    };
-
+          filename: image.originalname,
+          content: image.buffer
+        })) : []
+      };
     try {
         await transporter.sendMail(mailOptions);
         res.status(200).json({ message: 'Email sent successfully' });
