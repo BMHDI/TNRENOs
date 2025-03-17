@@ -74,26 +74,21 @@
     <div id="about-us" class="about-us">
       <h2 class="about-us-h2">About Us</h2>
       <p class="about-us-text">
-        Welcome to TN RENO's – your trusted local renovation experts! Founded by
-        Tarik and Nizar, we bring years of experience and a passion for
-        transforming spaces into something extraordinary. At TN RENO's, we
-        specialize in all types of renovations – from kitchen and bathroom
-        makeovers to full home and commercial upgrades. Our team combines
-        artistic vision with expert craftsmanship to deliver results that not
-        only meet but exceed your expectations. We take pride in offering the
-        best value for your money. Our commitment to quality means you get
-        top-notch materials, precise attention to detail, and a finished product
-        that stands the test of time – all at a fair price. As a local business,
-        we understand the importance of building trust and lasting relationships
-        with our clients. When you wor k with TN RENO's, you’re not just hiring
-        contractors – you’re partnering with artists who are dedicated to
-        bringing your vision to life. Let us turn your space into something
-        truly special. Get in touch today to see how TN RENO's can make your
-        dream renovation a reality!
+        Welcome to TN RENO's – Your Trusted Local Renovation Experts! Founded by
+        Tarik and Nizar, TN RENO's brings years of experience and a passion for
+        transforming spaces. We specialize in all types of renovations – from
+        kitchens and bathrooms to full home and commercial upgrades. Our team
+        combines artistic vision with expert craftsmanship to deliver results
+        that exceed expectations. We take pride in offering top-notch materials,
+        attention to detail, and lasting quality – all at a fair price. As a
+        local business, we value trust and long-term relationships with our
+        clients. When you work with TN RENO's, you're partnering with artists
+        dedicated to bringing your vision to life. Let us make your dream
+        renovation a reality – contact us today!
       </p>
-      <h2 onclick="location.href='#contact-us'" class="irregular-text-button">
+      <h3 onclick="location.href='#contact-us'" class="irregular-text-button">
         GET YOUR FREE QUOTE NOW !
-      </h2>
+      </h3>
     </div>
 
     <!-- contact us -->
@@ -108,16 +103,40 @@
       <div class="form-container">
         <form id="Form">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+          <input
+            placeholder="Enter your name"
+            type="text"
+            id="name"
+            name="name"
+            required
+          />
 
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <input
+            placeholder="Enter your email"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
 
           <label for="phone">Phone Number</label>
-          <input type="phone" id="phone" name="phone" required />
+          <input
+            placeholder="+1 (123) 456-7890"
+            type="phone"
+            id="phone"
+            name="phone"
+            required
+          />
 
           <label for="quote">What is the quote about?</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            rows="2"
+            placeholder="Enter your message"
+            required
+          ></textarea>
 
           <div class="confirmation" id="confirmation-div"></div>
 
@@ -135,11 +154,27 @@
             </button>
           </div>
         </form>
-        <div class="contact-us-text">
-          Let's discuss<br />
-          your project!<br />
-          Contact Us today<br />
-          for a free consultation!
+        <div class="contact-us-text-container">
+          <div class="contact-us-text">
+            Let's discuss<br />
+            your project!<br />
+            Contact Us today<br />
+            for a free consultation!
+          </div>
+          <div class="social-icons-container">
+            <img class="social-icon" src="./assets/email.png" alt="Email" />
+            <span class="email-text">contact@tnrenos.ca</span>
+            <img
+              class="social-icon"
+              src="./assets/facebook.png"
+              alt="Facebook"
+            />
+            <img
+              class="social-icon"
+              src="./assets/instagram.png"
+              alt="Instagram"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -150,10 +185,11 @@
           <br />
         </p>
       </div>
-      <div class="social-icons">
-        <img class="social-icon" src="./assets/facebook.png" alt="Facebook" />
-        <img class="social-icon" src="./assets/instagram.png" alt="Instagram" />
-      </div>
+      <p>
+        TN RENO's is a registered renovation company in Calgary, Alberta. All
+        content, images, and trademarks belong to TN RENO's and are protected by
+        copyright.
+      </p>
     </div>
   </body>
   <script src="script.js"></script>
