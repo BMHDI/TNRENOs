@@ -204,7 +204,7 @@ body {
 
 p {
   color: #080707;
-  line-height: 1.6;
+  line-height: 1.5;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -212,14 +212,11 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: justify;
-  text-align: center;
-
   background-color: #ff4800;
   color: #fff;
 }
 .about-us-text {
-  padding: 2rem 1rem;
+  padding: 0rem 1rem;
   text-align: justify;
 }
 
@@ -229,6 +226,12 @@ p {
   text-transform: uppercase;
   font-weight: bold;
   padding-top: 2rem;
+}
+.CTA-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
 }
 
 .about-us-h3 {
@@ -283,6 +286,13 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; 
+ 
+}
+@media screen and (max-width: 768px) {
+  .contact-us {
+    align-items: center;
+  }
+
 }
 .submit {
   background-color: #461401;
@@ -344,12 +354,10 @@ textarea {
   }
   .contact-us-text {
     padding: 0 !important ;
-    text-align: justify;
-  }
-  .contact-us-text-container {
     align-items: center;
     width: 80% !important;
     padding: 0 !important;
+    font-size: 1.5rem !important;
   }
   .footer {
     flex-direction: column ! important;
@@ -386,11 +394,12 @@ input[type="file"]::-webkit-file-upload-button {
 
 .contact-us-text {
   padding: 4rem 1rem;
-  text-align: justify;
+  text-align: start;
   font-size: 2rem;
   line-height: 1;
   font-weight: bold;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .contact-us-image {
@@ -399,8 +408,8 @@ input[type="file"]::-webkit-file-upload-button {
 }
 .footer {
   margin-top: 0.2rem;
-  display: flex;
-  flex-direction: row;
+
+  flex-direction: column;
   justify-content: center;
   align-items: start;
   background-color: #461401;
