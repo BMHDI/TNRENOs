@@ -15,20 +15,6 @@ function toggleMenu() {
   }
 }
 
-//    window.addEventListener('scroll', () => {
-//        if (scrollDisabled) return; // Prevent hiding if menu is open
-
-//        const navbar = document.querySelector('.navbar');
-//        if (window.scrollY < lastScrollY) {
-//            // Scrolling up → Show navbar
-//            navbar.style.top = '0';
-//        } else {
-//            // Scrolling down → Hide navbar
-//            navbar.style.top = '-100px';
-//        }
-
-//        lastScrollY = window.scrollY;
-//    });
 // to keep the navbar allt ime shown
 // Navbar Scroll Hide/Show Logic
 let lastScrollY = window.scrollY;

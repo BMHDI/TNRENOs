@@ -303,7 +303,7 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; 
+  align-items: center; 
  
 }
 @media screen and (max-width: 768px) {
@@ -367,7 +367,7 @@ textarea {
   flex-direction: row;
   justify-content: space-evenly;
 width: 100dvw;
-max-width: 1550px;
+max-width: 1000px;
   
 }
 @media screen and (max-width: 768px) {
@@ -424,12 +424,21 @@ input[type="file"]::-webkit-file-upload-button {
   color: #fff;
   text-transform: uppercase;
 }
+.contact-us-image-container {
+  position: relative; /* Ensure the parent is positioned */
+  padding-left: 100vw; /* Create space equal to the image width */
+  height: 35dvw;
+  max-height: 500px;
+}
 
 .contact-us-image {
+  position: absolute; /* Position it relative to the parent container */
+  left: 0; /* Stick to the left side */
   max-width: 1400px;
-  width: 100dvw;
+  width: 100vw; /* Use vw instead of dvw for better browser support */
   height: auto;
 }
+
 .footer {
   margin-top: 0.2rem;
 
@@ -462,6 +471,11 @@ input[type="file"]::-webkit-file-upload-button {
 .contact-us-wrapper {
   width: 100%;
   max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 
