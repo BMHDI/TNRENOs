@@ -14,19 +14,34 @@ body {
   position: relative;
   z-index: 1001; /* Higher than the navbar */
   transition: all 3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+ 
 }
 
 /* Main Navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+width: 910px;
+margin-right: 10px;
+ 
+
+}
 .navbar {
   align-items: center;
   padding-top: 0.5rem;
   color: rgb(0, 0, 0);
   background-color: #fff;
   display: flex;
-  justify-content: space-between;
-  padding-left: 10%;
-  padding-right: 10%;
-  width: 80%; /* Ensure consistent width */
+  justify-content: center;
+  width: 100%;
   position: fixed;
   transition: top 0.3s ease;
   z-index: 200;
@@ -164,7 +179,8 @@ body {
   justify-content: center;
 }
 .text-container {
-  margin: 4rem 1rem;
+  margin-top: 4rem ;
+  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -209,7 +225,7 @@ p {
   margin: 0 auto;
 }
 .about-us {
-  padding: 2rem ;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -275,9 +291,7 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
 }
-.contact-us-wrapper {
-  
-}
+
 .contact-us-h2-wrapper {
   align-self: center;
   
@@ -311,14 +325,18 @@ textarea {
 }
 
 .social-icons {
-  margin-left: 1.5rem;
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+
 }
 
 .social-icon {
   width: 1.5rem;
   height: 1.5rem;
-  margin: 0.5rem;
+  margin-right: 0.5rem;
   cursor: pointer;
+  padding-left: 0.75rem;
 }
 
 .confirmation {
@@ -348,7 +366,8 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  max-width: 1800px;
+width: 100dvw;
+max-width: 1550px;
   
 }
 @media screen and (max-width: 768px) {
@@ -407,8 +426,8 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 .contact-us-image {
-  max-width: 1800px;
-  width: 80dvw;
+  max-width: 1400px;
+  width: 100dvw;
   height: auto;
 }
 .footer {
@@ -439,6 +458,12 @@ input[type="file"]::-webkit-file-upload-button {
   justify-content: end;
   align-items: center;
 }
+
+.contact-us-wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
 
 .contact-us-text-container {
 
