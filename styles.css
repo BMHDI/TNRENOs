@@ -29,10 +29,14 @@ body {
   align-items: center;
   position: relative;
   background-color: #fff;
-width: 910px;
+width: 70dvw;
 margin-right: 10px;
- 
-
+}
+@media screen and (max-width: 950px) {
+  .navbar-container {
+    width: 100dvw;
+    
+  }
 }
 .navbar {
   align-items: center;
@@ -225,7 +229,7 @@ p {
   margin: 0 auto;
 }
 .about-us {
-
+  padding: 2rem 0rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -234,17 +238,12 @@ p {
   align-items: center;
 }
 .about-us-text {
-  padding: 0rem 1rem;
+  padding: 4rem 1rem;
   text-align: justify;
+  line-height: 1.5;
 }
 
-.about-us-h2 {
-  font-size: 2.5rem;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding-top: 2rem;
-}
+
 .CTA-container {
   display: flex;
   justify-content: center;
@@ -286,15 +285,21 @@ input,
 textarea {
   width: 100%;
   padding: 10px;
-
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
-.contact-us-h2-wrapper {
-  align-self: center;
+.titlewrapper {
+  align-self: flex-start;
+  padding-left: 15dvw;
   
+}
+@media screen and (max-width: 950px) {
+  .titlewrapper {
+    padding-left: 0dvw;
+}
 }
 
 .contact-us {
@@ -325,10 +330,15 @@ textarea {
 }
 
 .social-icons {
-  width: 900px;
+  width: 70dvw;
   display: flex;
   flex-direction: row;
-
+}
+@media screen and (max-width: 950px) {
+  .social-icons {
+    width: 100dvw;
+  }
+  
 }
 
 .social-icon {
@@ -353,12 +363,12 @@ textarea {
   font-size: large;
   font-weight: bold;
 }
-.contact-us-h2 {
-  font-size: 2rem;
+.sectiontitle-h2 {
+  font-size: 3rem;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 4rem;
+  padding: 4rem 1rem;
   
 }
 

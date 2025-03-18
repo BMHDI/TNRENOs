@@ -37,12 +37,12 @@
         </div>
       </div>
     </div>
-<!-- navigation menu -->
+    <!-- navigation menu -->
     <ul class="menu-list">
       <li><a href="#top-bar">Home</a></li>
-      <li><a href="#about-us">About</a></li>
+      <li><a href="#text-container">About</a></li>
       <li><a href="#">Services</a></li>
-      <li><a href="#contact-us">Contact</a></li>
+      <li><a href="#form">Contact</a></li>
     </ul>
     <!-- Hero Section -->
     <div id="hero" class="hero">
@@ -64,7 +64,7 @@
           GET YOUR FREE QUOTE NOW
         </button>
       </div>
-      <div class="text-container">
+      <div id="text-container" class="text-container">
         <p class="about-us-text">
           At TN RENO's, we combine artistic vision with expert work to transform
           spaces with precision and care. We take pride in delivering
@@ -75,7 +75,9 @@
     </div>
     <!-- about us section -->
     <div id="about-us" class="about-us">
-      <div class="contact-us-h2">About Us</div>
+      <div class="titlewrapper">
+      <div class="sectiontitle-h2">About Us</div>
+      </div>
       <p class="about-us-text">
         Welcome to TN RENO's – Your Trusted Local Renovation Experts! Founded by
         Tarik and Nizar, TN RENO's brings years of experience and a passion for
@@ -96,20 +98,21 @@
 
     <!-- contact us -->
     <div id="contact-us" class="contact-us">
-      <div class="contact-us-h2-wrapper">
-        <div class="contact-us-h2">Contact Us</div>
+      <div class="titlewrapper">
+        <div class="sectiontitle-h2">Contact Us</div>
       </div>
       <div class="contact-us-wrapper">
         <div class="contact-us-image-container">
-        <img
-          class="contact-us-image"
-          src="./assets/Pattern-02.png"
-          alt=""
-          class="contact-us-image"
-        /></div>
+          <img
+            class="contact-us-image"
+            src="./assets/Pattern-02.png"
+            alt=""
+            class="contact-us-image"
+          />
+        </div>
         <div class="form-container">
-          <form id="Form">
-            <label for="name">Name</label>
+          <form id="form">
+            <!-- <label for="name">Name</label> -->
             <input
               placeholder="Enter your name"
               type="text"
@@ -118,7 +121,7 @@
               required
             />
 
-            <label for="email">Email</label>
+            <!-- <label for="email">Email</label> -->
             <input
               placeholder="Enter your email"
               type="email"
@@ -126,9 +129,10 @@
               name="email"
               required
             />
-
-            <label for="phone">Phone Number</label>
+<!-- 
+            <label for="phone">Phone Number</label> -->
             <input
+              
               placeholder="+1 (123) 456-7890"
               type="phone"
               id="phone"
