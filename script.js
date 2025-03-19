@@ -165,6 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } finally {
         // disable button
         button.disabled = true;
+        button.textContent = "Sent!";
       }
     });
   } else {
