@@ -128,7 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Show sending...
       button.textContent = "Sending...";
-
+      document.getElementById("confirmation-div").innerHTML =
+      `<div class="confirmation" style="display: flex ; justify-content: center ; align-items: start ;">Sending<span class="loader"></span></div>`;
       // Make an AJAX request to the email sending endpoint
       try {
         const response = await fetch(
@@ -165,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } finally {
         // disable button
         button.disabled = true;
-        button.textContent = "Sent!";
+        button.textContent = "Email Sent!";
       }
     });
   } else {

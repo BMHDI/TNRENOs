@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TN Reno's</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Navbar -->
 
     <div id="top-bar" class="top-navbar">
       <div class="social-icons">
+        <img class="social-icon" src="./assets/email.png" alt="Email" />
+        <span class="email-text">contact@tnrenos.ca</span>
         <img
           class="social-icon"
           src="./assets/facebook.png"
@@ -36,7 +41,7 @@
         </div>
         <div class="menu">
           <div class="slogan">Turn it New</div>
-          <div id="menu-icon" class="menu-icon" >☰</div>
+          <div id="menu-icon" class="menu-icon">☰</div>
         </div>
       </div>
     </div>
@@ -67,13 +72,23 @@
           GET YOUR FREE QUOTE NOW
         </button>
       </div>
-      <div id="text-container" class="text-container">
-        <p class="about-us-text">
-          At TN RENO's, we combine artistic vision with expert work to transform
-          spaces with precision and care. We take pride in delivering
-          exceptional results at a great value, ensuring that every renovation
-          exceeds expectations.
+      <div class="about-us-text">
+      <div id="text-container" class="about-us-text">
+      
+        <p >
+          At <strong>TN RENO’s</strong>, we specialize in:  
         </p>
+        <ul class="why-us-list">
+          <li><strong> Flooring:</strong> Expert installation and refinishing for a flawless finish.</li>
+          <li><strong> Painting:</strong> High-quality interior and exterior painting with clean lines and vibrant colors.</li>
+          <li><strong> Bathroom Renovations:</strong> Modern designs and smart layouts for comfort and style.</li>
+          <li><strong> Kitchen Cabinets:</strong> Installation and painting to refresh and elevate your kitchen space.</li>
+          <li><strong> Basement Development:</strong> Transform your basement into a functional and inviting space.</li>
+        </ul>
+        <p>
+          We combine creative design with skilled craftsmanship to deliver stunning results — on time and within budget.
+        </p>
+      </div>
       </div>
     </div>
     <!-- about us section -->
@@ -82,20 +97,34 @@
         <h2 class="sectiontitle-h2">Why Choose TN RENO’s?</h2>
       </div>
       <div class="about-us-text">
-      
-    <p>
-      At <strong>TN RENO’s</strong>, we <strong>Transform</strong> and <strong>Turn to New</strong> — delivering spaces that are beautiful, functional, and built to last. From kitchens and bathrooms to full home and commercial upgrades, we make your vision a reality.  
-    </p>
-    <ul class="why-us-list">
-      <li><strong>Stress-Free Experience</strong> – We handle every detail from start to finish — no surprises, no headaches.</li>
-      <li><strong>Quality You Can Trust</strong> – Top materials, expert craftsmanship, and flawless finishes — every time.</li>
-      <li><strong>Smart Investment</strong> – Boost your property’s value with thoughtful design and lasting quality.</li>
-      <li><strong>Creative & Functional</strong> – Beautiful spaces that work for your lifestyle.</li>
-    </ul>
-    <p>
-      Don’t settle for average — <strong>Transform</strong> your space and <strong>Turn to New</strong> with TN RENO’s.  
-    </p>
-     
+        <p >
+          At <strong>TN RENO’s</strong>, we <strong>Transform</strong> and
+          <strong>Turn to New</strong> — delivering spaces that are beautiful,
+          functional, and built to last. From kitchens and bathrooms to full
+          home and commercial upgrades, we make your vision a reality.
+        </p>
+        <ul class="why-us-list">
+          <li>
+            <strong>Stress-Free Experience</strong> – We handle every detail
+            from start to finish — no surprises, no headaches.
+          </li>
+          <li>
+            <strong>Quality You Can Trust</strong> – Top materials, expert
+            craftsmanship, and flawless finishes — every time.
+          </li>
+          <li>
+            <strong>Smart Investment</strong> – Boost your property’s value with
+            thoughtful design and lasting quality.
+          </li>
+          <li>
+            <strong>Creative & Functional</strong> – Beautiful spaces that work
+            for your lifestyle.
+          </li>
+        </ul>
+        <p>
+          Don’t settle for average — <strong>Transform</strong> your space and
+          <strong>Turn to New</strong> with TN RENO’s.
+        </p>
       </div>
     </div>
 
@@ -117,7 +146,7 @@
           <form id="Form">
             <!-- <label for="name">Name</label> -->
             <input
-            class="Form-input"
+              class="Form-input"
               placeholder="Enter your name"
               type="text"
               id="name"
@@ -127,14 +156,14 @@
 
             <!-- <label for="email">Email</label> -->
             <input
-            class="Form-input"
+              class="Form-input"
               placeholder="Enter your email"
               type="email"
               id="email"
               name="email"
               required
             />
-<!-- 
+            <!-- 
             <label for="phone">Phone Number</label> -->
             <input
               class="Form-input"
@@ -147,7 +176,7 @@
 
             <!-- <label for="quote">What is the quote about?</label> -->
             <textarea
-            class="Form-input"
+              class="Form-input"
               id="message"
               name="message"
               rows="2"
