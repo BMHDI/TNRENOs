@@ -107,7 +107,7 @@ margin-right: 10px;
 }
 
 .menu-list.show {
-  padding-top: 7em;
+  padding-top: 6em;
   opacity: 1;
   transform: translateX(0); /* Slide into view */
   pointer-events: auto; /* Enable clicks when visible */
